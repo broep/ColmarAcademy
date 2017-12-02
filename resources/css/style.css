@@ -45,7 +45,7 @@ header .logo strong {
   display: flex;
   position: relative;
 
-  background-color: rgba(215, 215, 215, 1);
+  background-color: rgba(215, 215, 215, 1); /*gray background */
 
 
 }
@@ -93,7 +93,7 @@ header .logo strong {
 .information {
   position: relative;
   display: flex;
-  background-color: white;
+  background-color: rgba(243,243,243,1);
 
 }
 
@@ -168,4 +168,46 @@ header .logo strong {
 .info.guest-lecture {
   background-color: rgba(215,215,215, 1)
 
+}
+
+.course-container {
+  background-color: rgba(215, 215, 215, 1); /*gray background */
+  padding: 0 3.5rem;
+}
+
+.course-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem;
+}
+
+.courses {
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+.course {
+  background-color: white;
+  margin: 0 1rem ;
+  width: 33%;
+  padding-bottom: 1rem;
+
+}
+
+.course img {
+  width: 100%
+}
+
+.course h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.courses p {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
 }
