@@ -5,6 +5,7 @@
  }
 
 header {
+  background-color: white;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -92,4 +93,32 @@ header .logo strong {
   padding: 0.5rem 0;
   margin-right: 4rem;
   text-align: center;
+}
+
+/* Style the information section */
+.information {
+  position: relative;
+  display: flex;
+  background-color: white;
+
+}
+
+.information-main {
+  min-width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.information-main img {
+
+  top: 2rem;
+  width: 100%;
+  height: auto;
+}
+
+.information-side {
+  margin: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
