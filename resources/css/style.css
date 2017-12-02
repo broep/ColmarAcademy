@@ -44,7 +44,7 @@ header .logo strong {
 .banner {
   display: flex;
   position: relative;
-  top: 65px;
+
   background-color: rgba(215, 215, 215, 1);
 
 
@@ -56,12 +56,6 @@ header .logo strong {
 }
 
 .banner-image img {
-
-/*  background: url('../../images/banner.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 2rem 1.5rem;*/
-
   width: 100%;
   height: auto;
 
@@ -105,20 +99,73 @@ header .logo strong {
 
 .information-main {
   min-width: 60%;
+  max-width: 60%;
   margin: 2rem 1.5rem;
 }
 
 .information-main img {
 
-  top: 2rem;
   width: 100%;
   height: auto;
+}
+
+.information-main h1 {
+  margin: 1.5rem 0 2rem 0;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.main-info-text .author {
+  margin: 2rem 0 2rem 0;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .information-side {
   margin: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+}
+
+.info {
+  display: flex;
+
+
+}
+
+.info.orientation img {
+  margin-top: 0;
+}
+
+.info img {
+  width: 35%;
+  align-self: flex-start;
+  margin: 16px;
+}
+
+.information-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
+}
+
+.information-text h1 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.information-text p {
+  margin: 0.5rem 0;
+}
+
+
+.information-text a {
+  color: rgba(84, 149, 226, 1);
+}
+
+.info.guest-lecture {
+  background-color: rgba(215,215,215, 1)
 
 }
