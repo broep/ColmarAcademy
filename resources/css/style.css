@@ -12,6 +12,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  top: 0;
 }
 
 header nav ul {
@@ -40,6 +41,55 @@ header .logo strong {
 }
 
 .banner {
+  display: flex;
   position: relative;
   top: 65px;
+  background-color: rgba(215, 215, 215, 1);
+
+
+}
+
+.banner-image {
+  min-width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.banner-image img {
+
+/*  background: url('../../images/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem 1.5rem;*/
+
+  width: 100%;
+  height: auto;
+
+
+}
+
+.banner-text {
+  margin: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.banner-text h2 {
+  font-size: 2rem;
+  padding: 1.5rem 0;
+}
+
+.banner-text .btn {
+  font-size: 1.5rem;
+  background-color: rgba(75, 75, 75, 1);
+  color: rgba(255, 255, 255, 1);
+  padding: 0.5rem 0;
+  margin-right: 4rem;
+  text-align: center;
 }
