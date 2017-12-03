@@ -41,46 +41,25 @@ header .logo strong {
     color: rgba(75, 75, 75, 1);
 }
 
-.banner {
+.banner-container {
   display: flex;
   position: relative;
-
   background-color: rgba(215, 215, 215, 1); /*gray background */
-
-
+    top: 65px;
 }
 
-.banner-image {
-  min-width: 60%;
-  margin: 2rem 1.5rem;
-}
 
-.banner-image img {
-  width: 100%;
-  height: auto;
-
-
-}
-
-.banner-text {
-  margin: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-}
-
-.banner-text h1 {
+.banner h1 {
   font-size: 3rem;
   font-weight: bold;
 }
 
-.banner-text h2 {
+.banner h2 {
   font-size: 2rem;
   padding: 1.5rem 0;
 }
 
-.banner-text .btn {
+.banner .btn {
   font-size: 1.5rem;
   background-color: rgba(75, 75, 75, 1);
   color: rgba(255, 255, 255, 1);
@@ -94,32 +73,32 @@ header .logo strong {
 .information-container {
   position: relative;
   background-color: rgba(243,243,243,1);
+      top: 65px;
 }
 
-.information {
+.container-100 { /* Default container for horizontal section */
   position: relative;
   display: flex;
 
 
 }
 
-.information-main {
+.container-60 { /* Used to fill up 60% of a horizontal container */
   min-width: 60%;
   max-width: 60%;
   margin: 2rem 1.5rem;
 }
 
-.information-main img {
-
-  width: 100%;
+.container-60 img {
+  width: 100%; /* ensures the image does not overflow the width */
   height: auto;
 }
 
-.information-main video {
-  width: 100%;
+.container-60 video {
+  width: 100%; /* ensures the video does not overflow the width */
 }
 
-.information-main h1 {
+.container-60 h1 {
   margin: 1.5rem 0 2rem 0;
   font-size: 2rem;
   font-weight: bolder;
@@ -131,11 +110,19 @@ header .logo strong {
   font-weight: bold;
 }
 
-.information-side {
+.container-40 {
   margin: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.container-40.banner {
+  margin: 2rem 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;*/
 }
 
 .info {
@@ -183,9 +170,11 @@ header .logo strong {
 .course-container {
   background-color: rgba(215, 215, 215, 1); /*gray background */
   padding: 0 3.5rem;
+      top: 65px;
+      position: relative;
 }
 
-.course-header h1 {
+.container-header h1 {
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
@@ -224,4 +213,6 @@ header .logo strong {
 
 .thesis-container {
   background-color: rgba(243, 243, 243, 1);
+      top: 65px;
+      position: relative;
 }
