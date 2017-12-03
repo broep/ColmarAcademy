@@ -25,16 +25,17 @@ nav li {
   padding-left: 1rem;
 }
 
+
 header .logo {
   display: flex;
   align-items: center;
   color: rgb(155, 155, 155, 1);
   line-height: 32px;
 }
+
 header .logo img {
   margin-left: 1.5rem;
 }
-
 
 header .logo strong {
   font-weight: bolder;
@@ -49,20 +50,27 @@ header .logo strong {
   header .desktop {
     display: none;
   }
-header .logo {
-  display: none;
-}
+
+  header .logo {
+    display: none;
+  }
 
   header .mobile {
     display: inline-block;
     width: 100%;
   }
-  nav ul {
-  justify-content: space-between;
-  align-items: center;
-}
-}
 
+  nav ul {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li a:hover {
+    border: 1px rgba(75, 75, 75, 1) solid
+    transition: border 200ms linear;
+  }
+
+}
 
 .banner-container {
   display: flex;
@@ -70,7 +78,6 @@ header .logo {
   background-color: rgba(215, 215, 215, 1); /*gray background */
     top: 65px;
 }
-
 
 .banner h1 {
   font-size: 3rem;
@@ -85,10 +92,17 @@ header .logo {
 .banner .btn {
   font-size: 1.5rem;
   background-color: rgba(75, 75, 75, 1);
+  border: 1px solid rgba(75, 75, 75, 1);
   color: rgba(255, 255, 255, 1);
   padding: 0.5rem 0;
   margin-right: 4rem;
   text-align: center;
+}
+
+.banner .btn:hover {
+  background-color: rgba(146,224,224,1);
+  color: rgba(75, 75, 75, 1);
+  transition: background-color 100ms ease-in 50ms, color 100ms ease-in 50ms;
 }
 
 /* Style the information section */
@@ -145,7 +159,7 @@ header .logo {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;*/
+  justify-content: center;
 }
 
 @media only screen and (max-width: 480px) {
@@ -154,6 +168,40 @@ header .logo {
     max-width: 100%;
     margin: 0;
   }
+  .container-100.banner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-40.banner {
+    /*width: 100%;*/
+    margin: 0;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.container-60 img {
+  width: 100%; /* ensures the image does not overflow the width */
+  height: auto;
+}
+
+.banner h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.banner h2 {
+  font-size: 1.2rem;
+  padding: 1.5rem 0;
+}
+
+.banner .btn {
+  font-size: 1.2rem;
+
+  padding: 0.5rem 0;
+  margin-right: 0;
+  text-align: center;
+
 }
 
 .info {
@@ -170,6 +218,14 @@ header .logo {
   width: 35%;
   align-self: flex-start;
   margin: 16px;
+}
+
+.orientation-image {
+  width: 35%;
+  margin: 1rem;
+  background-image: url('../../images/information-orientation.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .information-text {
@@ -219,13 +275,19 @@ header .logo {
   }
   .info img {
     width: 100%;
-    height: auto;
+    height: 50%;
     margin: 0;
-    background-size: auto;
+    background-size: cover;
   }
 
   .information-text {
     padding-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .info.guest-lecture {
+    background-color: white;
   }
 
 }
@@ -256,6 +318,38 @@ header .logo {
   display: none;
 }
 
+.course {
+  background-color: white;
+  margin: 0 1rem ;
+  width: 33%;
+  padding-bottom: 1rem;
+
+}
+
+.course:hover {
+  opacity: 0.5;
+  transition: opacity 300ms linear;
+}
+
+.course img {
+  width: 100%;
+}
+
+.course h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.courses p {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+/* Styling for the mobile courses section
+*/
 @media only screen and (max-width: 480px) {
   .course-container {
     background-color: white;
@@ -286,38 +380,19 @@ header .logo {
     font-weight: bold;
   }
 
-  .btn {
+  .mobile .btn {
     font-size: 1rem;
     background-color: rgba(75, 75, 75, 1);
     padding: 1.25rem;
     text-align: left;
     margin-top: 1rem;
+    border: 1px solid rgba(215, 215, 215, 1);
+  }
+  .mobile .btn:hover {
+    background-color: white;
+    transition: background-color 400ms ease-out;
+  }
 
-}
-
-.course {
-  background-color: white;
-  margin: 0 1rem ;
-  width: 33%;
-  padding-bottom: 1rem;
-
-}
-
-.course img {
-  width: 100%
-}
-
-.course h1 {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-left: 1rem;
-}
-
-.courses p {
-  margin-bottom: 0.5rem;
-  padding-left: 1rem;
 }
 
 .thesis-container {
