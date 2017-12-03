@@ -41,6 +41,29 @@ header .logo strong {
     color: rgba(75, 75, 75, 1);
 }
 
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  header .desktop {
+    display: none;
+  }
+header .logo {
+  display: none;
+}
+
+  header .mobile {
+    display: inline-block;
+    width: 100%;
+  }
+  nav ul {
+  justify-content: space-between;
+  align-items: center;
+}
+}
+
+
 .banner-container {
   display: flex;
   position: relative;
@@ -125,9 +148,16 @@ header .logo strong {
   justify-content: center;*/
 }
 
+@media only screen and (max-width: 480px) {
+  .container-60 {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
 .info {
   display: flex;
-
 
 }
 
@@ -168,6 +198,39 @@ header .logo strong {
 
 }
 
+@media only screen and (max-width: 480px) {
+  .information-container {
+    background-color: white;
+  }
+
+  .container-60.information {
+    display: none;
+  }
+
+  .container-40.information {
+    width: 100%;
+    margin: 0.5rem;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .info img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-size: auto;
+  }
+
+  .information-text {
+    padding-left: 1rem;
+  }
+
+}
+
+
 .course-container {
   background-color: rgba(215, 215, 215, 1); /*gray background */
   padding: 0 3.5rem;
@@ -187,6 +250,49 @@ header .logo strong {
   display: flex;
   margin-top: 1rem;
   padding-bottom: 2rem;
+}
+
+.courses.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .course-container {
+    background-color: white;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .courses.level-1 {
+    display: none;
+  }
+
+  .courses.level-2 {
+    display: none;
+  }
+
+  .courses.mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .courses.mobile ul {
+
+
+
+  }
+  .courses.mobile li {
+    padding-left: 1rem 1rem 1.5rem 1rem;
+    background-color: rgba(215, 215, 215, 1);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .btn {
+    font-size: 1rem;
+    background-color: rgba(75, 75, 75, 1);
+    padding: 1.25rem;
+    text-align: left;
+    margin-top: 1rem;
+
 }
 
 .course {
@@ -224,6 +330,11 @@ header .logo strong {
   background-color: rgba(215,215,215, 1)
 }
 
+footer nav ul {
+  display: flex;
+  margin-right: 1.5rem;
+}
+
 .container-footer {
   background-color: rgba(243, 243, 243, 1);
   position: relative;
@@ -234,7 +345,26 @@ header .logo strong {
   padding: 1rem 1.5rem 3rem 1.5rem;
 }
 
-footer nav ul {
-  display: flex;
-  margin-right: 1.5rem;
+/* Styling for the theis section mobile display */
+@media only screen and (max-width: 480px) {
+  .container-footer {
+    font-size: 0.75rem;
+      padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+
+  .thesis-container {
+    background-color: white;
+  }
+
+  .main-info-text.thesis {
+    display: none;
+  }
+
+  .container-40.thesis {
+    display: none;
+  }
+
+  .footer {
+    display: none;
+  }
 }
