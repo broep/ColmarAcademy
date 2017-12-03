@@ -135,6 +135,7 @@ header .logo strong {
   margin-top: 0;
 }
 
+
 .info img {
   width: 35%;
   align-self: flex-start;
@@ -178,11 +179,13 @@ header .logo strong {
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .courses {
   display: flex;
+  margin-top: 1rem;
   padding-bottom: 2rem;
 }
 
@@ -215,4 +218,23 @@ header .logo strong {
   background-color: rgba(243, 243, 243, 1);
       top: 65px;
       position: relative;
+}
+
+.info.fisma {
+  background-color: rgba(215,215,215, 1)
+}
+
+.container-footer {
+  background-color: rgba(243, 243, 243, 1);
+  position: relative;
+  top: 65px;
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 3rem 1.5rem;
+}
+
+footer nav ul {
+  display: flex;
+  margin-right: 1.5rem;
 }
