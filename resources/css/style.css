@@ -32,6 +32,10 @@ header .logo {
   color: rgb(155, 155, 155, 1);
   line-height: 32px;
 }
+.logo a {
+  display: flex;
+  align-items: center;
+}
 
 header .logo img {
   margin-left: 1.5rem;
@@ -100,7 +104,7 @@ header .logo strong {
 }
 
 .banner .btn:hover {
-  background-color: rgba(146,224,224,1);
+  background-color: rgba(215, 215, 215, 1);
   color: rgba(75, 75, 75, 1);
   transition: background-color 100ms ease-in 50ms, color 100ms ease-in 50ms;
 }
