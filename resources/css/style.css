@@ -90,10 +90,16 @@ header .logo strong {
 }
 
 /* Style the information section */
+
+.information-container {
+  position: relative;
+  background-color: rgba(243,243,243,1);
+}
+
 .information {
   position: relative;
   display: flex;
-  background-color: rgba(243,243,243,1);
+
 
 }
 
@@ -107,6 +113,10 @@ header .logo strong {
 
   width: 100%;
   height: auto;
+}
+
+.information-main video {
+  width: 100%;
 }
 
 .information-main h1 {
@@ -210,4 +220,8 @@ header .logo strong {
 .courses p {
   margin-bottom: 0.5rem;
   padding-left: 1rem;
+}
+
+.thesis-container {
+  background-color: rgba(243, 243, 243, 1);
 }
