@@ -16,8 +16,9 @@
         <a href="#"><img src="images/ic-logo.svg" alt="Colmar Academy Logo"></a>
         <span><strong>COLMAR</strong>ACADEMY</span>
       </div>
+      <!-- Navigation Blocks -->
       <nav class="desktop">
-        <ul>
+        <ul role="presentation">
           <li><a href="#">On campus</a></li>
           <li><a href="#">Online</a></li>
           <li><a href="#">Our companies</a></li>
@@ -25,14 +26,13 @@
         </ul>
       </nav>
       <nav class="mobile">
-        <ul>
+        <ul role="presentation">
           <li><a href="#"><img src="images/ic-logo.svg"></a></li>
           <li><a href="#"><img src="images/ic-on-campus.svg"></a></li>
           <li><a href="#"><img src="images/ic-online.svg"></a></li>
           <li><a href="#"><img src="images/ic-login.svg"></a></li>
         </ul>
       </nav>
-
     </header>
 
     <!-- Banner Introducing the College -->
@@ -60,12 +60,12 @@
               commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus
               sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat,
               tristique ligual."</p>
-            <p class="author">Emanuel, Sr Strategist at Hiring.com</p>
+            <p class="author" aria-label="Author">Emanuel, Sr Strategist at Hiring.com</p>
           </div>
         </div>
         <div class="container-40 information">
           <div class="info orientation">
-            <div class="info-image orientation"><!-- used as image placeholder -->
+            <div class="info-image orientation" title="Orientation image"><!-- used as image placeholder -->
             </div>
             <div class="information-text orientation">
               <h1>Orientation date</h1>
@@ -74,7 +74,7 @@
             </div>
           </div>
           <div class="info campus">
-            <div class="info-image campus">
+            <div class="info-image campus" title="Campus image">
             </div>
             <div class="information-text campus">
               <h1>Our campus</h1>
@@ -83,7 +83,7 @@
             </div>
           </div>
           <div class="info guest-lecture">
-            <div class="info-image guest-lecture"><!-- used as image placeholder -->
+            <div class="info-image guest-lecture" title="Guest Lecturer image"><!-- used as image placeholder -->
             </div>
             <div class="information-text guest-lecture">
               <h1>Our guest lecture</h1>
@@ -95,7 +95,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <!-- Courses Section, six items -->
@@ -148,7 +147,7 @@
 
       <div class="courses mobile">
         <nav>
-          <ul>
+          <ul role="presentation">
             <li class="btn">Software engineering</li>
             <li class="btn">Computer art</li>
             <li class="btn">Design</li>
@@ -181,7 +180,7 @@
         </div>
         <div class="container-40 thesis">
           <div class="info fisma">
-            <div class="info-image fisma" alt="Fisma Design Image"><!-- used as image placeholder -->
+            <div class="info-image fisma" title="Fisma Design Image"><!-- used as image placeholder -->
             </div>
             <div class="information-text fisma">
               <h1>Fisma: Design and Prototype</h1>
@@ -189,17 +188,14 @@
             </div>
           </div>
           <div class="info now-and-then">
-            <div class="info-image now-and-then"><!-- used as image placeholder -->
+            <div class="info-image now-and-then"  title="Now and then image"><!-- used as image placeholder use title instead of alt on divs-->
             </div>
-            <div class="information-text now-and-then" alt="Now and then image">
+            <div class="information-text now-and-then">
               <h1>Now and then</h1>
               <p>Research study about New York.</p>
             </div>
           </div>
-
         </div>
-
-
       </div>
     </div>
     <!-- footer -->
