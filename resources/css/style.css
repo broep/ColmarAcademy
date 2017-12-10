@@ -50,7 +50,7 @@ header .logo strong {
   display: none;
 }
 
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 480px) {
   header .desktop {
     display: none;
   }
@@ -99,7 +99,7 @@ header .logo strong {
   border: 1px solid rgba(75, 75, 75, 1);
   color: rgba(255, 255, 255, 1);
   padding: 0.5rem 0;
-  margin-right: 4rem;
+  padding-right: 4rem;
   text-align: center;
 }
 
@@ -114,25 +114,25 @@ header .logo strong {
 .information-container {
   position: relative;
   background-color: rgba(243,243,243,1);
-      top: 65px;
+  top: 65px;
 }
 
 .container-100 { /* Default container for horizontal section */
   position: relative;
   display: flex;
-
-
 }
 
 .container-60 { /* Used to fill up 60% of a horizontal container */
-  min-width: 60%;
-  max-width: 60%;
-  margin: 2rem 1.5rem;
+  width: 60%;
+/*  min-width: 60%;
+  max-width: 60%; */
+  padding: 2rem 1.5rem;
 }
 
 .container-60 img {
   width: 100%; /* ensures the image does not overflow the width */
   height: auto;
+
 }
 
 .container-60 video {
@@ -152,24 +152,23 @@ header .logo strong {
 }
 
 .container-40 {
-  margin: 2rem 1.5rem;
+  width: 40%;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .container-40.banner {
-  margin: 2rem 1.5rem;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 480px) {
   .container-60 {
-    min-width: 100%;
-    max-width: 100%;
+    padding: 0;
+    width: auto;
     margin: 0;
   }
   .container-100.banner {
@@ -177,11 +176,17 @@ header .logo strong {
     flex-direction: column;
   }
 
-  .container-40.banner {
-    /*width: 100%;*/
+  .container-40 {
+    width: auto; /*sets the container to take up the full amount of parent) */
     margin: 0;
-    padding: 2rem 1.5rem;
   }
+  .container-40.information {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 }
 
 .container-60 img {
@@ -213,23 +218,55 @@ header .logo strong {
 
 }
 
-.info.orientation img {
-  margin-top: 0;
-}
-
-
-.info img {
-  width: 35%;
-  align-self: flex-start;
-  margin: 16px;
-}
-
-.orientation-image {
-  width: 35%;
+.info-image {
+  min-width: 35%;
   margin: 1rem;
-  background-image: url('../../images/information-orientation.jpg');
   background-size: contain;
   background-repeat: no-repeat;
+
+}
+
+.info-image.orientation {
+  background-image: url('../../images/information-orientation.jpg');
+}
+
+.info-image.campus {
+    background-image: url('../../images/information-campus.jpg');
+}
+
+.info-image.guest-lecture {
+    background-image: url('../../images/information-guest-lecture.jpg');
+}
+
+.info-image:after { /* found a hack to keep the proportions of the image */
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .info-image {
+    background-size: contain;
+    margin: 0;
+  }
+  .info-image.orientation {
+    background-image: url('../../images/information-orientation-mobile.jpg');
+  }
+
+  .info-image.campus {
+      background-image: url('../../images/information-campus-mobile.jpg');
+  }
+
+  .info-image.guest-lecture {
+      background-image: url('../../images/information-guest-lecture-mobile.jpg');
+  }
+  .info-image:after { /* found a hack to keep the proportions of the image */
+    content: "";
+    display: block;
+    padding-bottom: 50%;
+  }
 }
 
 .information-text {
@@ -248,17 +285,15 @@ header .logo strong {
   margin: 0.5rem 0;
 }
 
-
 .information-text a {
   color: rgba(84, 149, 226, 1);
 }
 
 .info.guest-lecture {
   background-color: rgba(215,215,215, 1)
-
 }
 
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 480px) {
   .information-container {
     background-color: white;
   }
@@ -269,20 +304,16 @@ header .logo strong {
 
   .container-40.information {
     width: 100%;
-    margin: 0.5rem;
+    /*margin: 0.5rem;*/
   }
 
   .info {
     display: flex;
     flex-direction: column;
+    width: auto;
 
   }
-  .info img {
-    width: 100%;
-    height: 50%;
-    margin: 0;
-    background-size: cover;
-  }
+
 
   .information-text {
     padding-left: 1rem;
@@ -300,8 +331,8 @@ header .logo strong {
 .course-container {
   background-color: rgba(215, 215, 215, 1); /*gray background */
   padding: 0 3.5rem;
-      top: 65px;
-      position: relative;
+  top: 65px;
+  position: relative;
 }
 
 .container-header h1 {
@@ -354,7 +385,7 @@ header .logo strong {
 
 /* Styling for the mobile courses section
 */
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 480px) {
   .course-container {
     background-color: white;
     padding-left: 0.5rem;
@@ -374,9 +405,8 @@ header .logo strong {
   }
   .courses.mobile ul {
 
-
-
   }
+
   .courses.mobile li {
     padding-left: 1rem 1rem 1.5rem 1rem;
     background-color: rgba(215, 215, 215, 1);
@@ -401,8 +431,16 @@ header .logo strong {
 
 .thesis-container {
   background-color: rgba(243, 243, 243, 1);
-      top: 65px;
-      position: relative;
+  top: 65px;
+  position: relative;
+}
+
+.info-image.now-and-then{
+  background-image: url('../../images/thesis-now-and-then.jpg');
+}
+
+.info-image.fisma{
+  background-image: url('../../images/thesis-fisma.jpg');
 }
 
 .info.fisma {
@@ -425,7 +463,7 @@ footer nav ul {
 }
 
 /* Styling for the theis section mobile display */
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 480px) {
   .container-footer {
     font-size: 0.75rem;
       padding: 1rem 1.5rem 1rem 1.5rem;
